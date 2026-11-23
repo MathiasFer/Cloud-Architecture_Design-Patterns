@@ -1,0 +1,13 @@
+=== Terraform Validation: /terraform/hub-spoke ===
+$ cd terraform/hub-spoke
+$ terraform init -backend=false
+
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching "~> 5.0"...
+- Installing hashicorp/aws v5.40.0...
+- Installed hashicorp/aws v5.40.0 (signed by HashiCorp)
+
+Terraform has been successfully initialized!
+
+$ terraform validate
+Success! The configuration is valid.

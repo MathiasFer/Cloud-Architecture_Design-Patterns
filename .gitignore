@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+reports.db
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+*.exe

@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  ficha-ia:
+    build: ./ficha-ia
+    environment:
+      - CHAOS_MODE=none
+    networks:
+      - internal-net
+
+  reports-api:
+    build: ./reports-api
+    environment:
+      - FICHA_IA_URL=http://ficha-ia:8001/ficha
+    depends_on:
+      - ficha-ia
+    networks:
+      - internal-net
+      - public-net
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - reports-api
+    networks:
+      - public-net
+
+networks:
+  internal-net:
+  public-net:
