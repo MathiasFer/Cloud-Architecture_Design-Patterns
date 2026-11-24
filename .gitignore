@@ -3,7 +3,8 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
-reports.db
+*.db
+aws_replicated_records.json
 .terraform/
 .terraform.lock.hcl
 *.tfstate
